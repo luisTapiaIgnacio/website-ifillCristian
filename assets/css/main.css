@@ -1,0 +1,36 @@
+/* variables */
+
+:root{
+
+  --ink: #141414;
+  --ink-2: #1f1f1f;
+  --paper: #ffffff;
+  --mist: #f3f5f6;
+  --line: #dfe3e6;
+  --muted: #565e67;
+ 
+  --lime: #ffcc00; /* marca: logo, botón suscribirse, acentos sobre oscuro */
+  --lime-d: #ffcc00;
+  --marker: #d3ef43; /* resaltador de «Preguntas frecuentes» */
+ 
+  --olive: #6b7a1d; /* servicios */
+  --olive-l: #a4b32a;
+ 
+  --sky: #0f7ec4; /* publicidad */
+  --sky-l: #e7f3fb;
+ 
+  --sun: #f7c600; /* formulario */
+  --sun-l: #fbe07a;
+ 
+  --star: #f5a623;
+ 
+  --nav-h: 72px;
+  --stats-overlap: 3.25rem;
+ 
+  --font-head: "Barlow Condensed", "Arial Narrow", Arial, sans-serif;
+  --font-body: "Barlow", system-ui, -apple-system, "Segoe UI", Roboto, Arial, sans-serif;
+ 
+  --shadow: 0 14px 36px rgba(20, 20, 20, 0.14);
+
+
+}

@@ -1,0 +1,1962 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Bootstrap demo</title>
+
+    <!-- Tipografías: Barlow Condensed (títulos) + Barlow (texto) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@600;700&family=Barlow:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css"
+    />
+
+    <script
+      src="https://kit.fontawesome.com/yourcode.js"
+      crossorigin="anonymous"
+    ></script>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB"
+      crossorigin="anonymous"
+    />
+
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet" />
+
+    <link rel="stylesheet" href="../assets/css/main.css" />
+    <link rel="stylesheet" href="../assets/css/style.css" />
+
+    <!-- Accesibilidad + anti-flash de AOS -->
+    <style>
+      @media (prefers-reduced-motion: reduce) {
+        [data-aos] {
+          opacity: 1 !important;
+          transform: none !important;
+          transition: none !important;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+
+    <!-- ===================== NAVBAR (fijo) ===================== -->
+    <header>
+      <nav
+        id="navPrincipal"
+        class="navbar navbar-expand-lg fixed-top site-nav"
+        data-bs-theme="dark"
+        aria-label="Navegación principal"
+      >
+        <div class="container">
+          <a
+            class="brand-pill"
+            href="#inicio"
+            aria-label="Duramez, ir al inicio"
+            ><img
+              src="../assets/image/film.png"
+              alt="logo"
+              class="img-fluid"
+              style="width: 200px; height: auto"
+          /></a>
+
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#menuPrincipal"
+            aria-controls="menuPrincipal"
+            aria-expanded="false"
+            aria-label="Abrir menú"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+
+          <div
+            class="collapse navbar-collapse justify-content-lg-end"
+            id="menuPrincipal"
+          >
+            <div class="nav-pill">
+              <span class="nav-indicator" aria-hidden="true"></span>
+
+              <ul class="navbar-nav">
+                <li class="nav-item">
+                  <a class="nav-link" href="#inicio">Inicio</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#nosotros">Nosotros</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#galeria">Galería</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#servicios">Servicios</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#foro">Foro</a>
+                </li>
+                <li class="nav-item">
+                  <a class="nav-link" href="#contacto">Contacto</a>
+                </li>
+              </ul>
+
+              <a class="btn-suscribete" href="#newsletter">Suscríbete</a>
+            </div>
+          </div>
+        </div>
+      </nav>
+    </header>
+
+    <main id="contenido">
+      <!-- ===================== HERO / PORTADA ===================== -->
+      <section id="inicio" class="hero" aria-labelledby="hero-titulo">
+        <div class="hero__media" aria-hidden="true">
+          <div class="hero__fallback"></div>
+          <video
+            autoplay
+            muted
+            loop
+            playsinline
+            preload="metadata"
+            poster="../assets/image/hero-img.jpg"
+            tabindex="-1"
+            class="hero__video"
+          >
+            <source
+              src="../assets/video/duraflex-marble-anxiety-2-landscape-loop-nocaps-comp.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="../assets/video/duraflex-marble-anxiety-2-landscape-loop-nocaps-comp.mp4"
+              type="video/webm"
+            />
+          </video>
+          <div class="hero__overlay"></div>
+        </div>
+
+        <!-- Contenido con container -->
+        <div class="container hero__inner">
+          <div class="hero__copy">
+            <h1
+              id="hero-titulo"
+              class="hero__title"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              laminas<br />protectoras de superficie
+            </h1>
+            <p class="hero__lead" data-aos="fade-up" data-aos-delay="250">
+              Protección SPF para superficies que necesitan mantenerse
+              impecables. Mármol, cuarzo, granito, madera, ascensores y mucho
+              más.
+            </p>
+            <a
+              class="btn-hero"
+              href="#contacto"
+              data-aos="fade-up"
+              data-aos-delay="400"
+              >Contáctenos</a
+            >
+          </div>
+        </div>
+
+        <!-- Cifras: la barra oscura se monta sobre el borde inferior del hero -->
+        <div class="container hero__stats">
+          <ul class="stats" aria-label="Cifras de la empresa">
+            <li data-aos="zoom-in" data-aos-delay="500">
+              <strong class="stats__n" data-count="350" data-prefix="+"
+                >+350</strong
+              >
+              <span class="stats__l">Proyectos</span>
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="600">
+              <strong class="stats__n" data-count="12" data-suffix=" años"
+                >12 años</strong
+              >
+              <span class="stats__l">Experiencia</span>
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="700">
+              <strong class="stats__n" data-count="25" data-suffix="K"
+                >25K</strong
+              >
+              <span class="stats__l">Seguidores</span>
+            </li>
+            <li data-aos="zoom-in" data-aos-delay="800">
+              <strong class="stats__n" data-count="500" data-prefix="+"
+                >+500</strong
+              >
+              <span class="stats__l">Instalaciones</span>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <!-- ===================== NOSOTROS ===================== -->
+      <section
+        id="nosotros"
+        class="section section--about"
+        aria-labelledby="nosotros-titulo"
+      >
+        <div class="container">
+          <div class="faq__head" data-aos="fade-up">
+            <h2 id="faq-titulo" class="faq__title">
+              <span class="marker">¿QUE ES IFILL? </span>
+            </h2>
+            <a class="btn-outline-ink" href="#contacto">Ver todas</a>
+          </div>
+
+          <p
+            class="section-lead text-start"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            IFILL es una solución de protección para superficies mediante la
+            instalación de láminas <strong> (SurfaPce rotection Film).</strong>
+            Protegemos superficies como mármol, cuarzo, granito, madera,
+            ascensores y otros materiales, ayudando a prevenir rayones, manchas,
+            desgaste y daños producidos por el uso diario. Nuestras láminas son
+            transparentes y están diseñadas para mantener la apariencia original
+            de la superficie, sin cambiar su diseño ni acabado.
+          </p>
+          <br />
+          <div
+            class="row ifill-sec d-flex align-items-center"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <div
+              class="col-lg-4 text-center"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+            >
+              <img
+                src="../assets/image/ico-coment.png"
+                alt="coment"
+                class="img-fluid"
+                style="height: 150px; object-fit: contain"
+              />
+            </div>
+            <div
+              class="col-lg-8 fst-italic"
+              data-aos="fade-left"
+              data-aos-delay="400"
+            >
+              <p class="section-lead text-start fw-bold">
+                Ofrecemos
+                <span class="highlight-text">instalación profesional</span>
+                para hogares, empresas, locales comerciales, oficinas, hoteles y
+                otros espacios que buscan conservar sus superficies en buen
+                estado por más tiempo.
+              </p>
+            </div>
+          </div>
+
+          <div class="row align-items-center g-4 g-lg-5 mt-2">
+  <!-- Columna Izquierda: Video (Ahora con diseño casi cuadrado) -->
+  <div class="col-lg-5" data-aos="fade-right" data-aos-delay="150">
+    <div class="video-wrapper-new">
+      <!-- Detalle decorativo de fondo amarillo -->
+      <div class="video-bg-accent"></div>
+      <div class="video-container-clean">
+        <video
+          controls
+          preload="none"
+          playsinline
+          poster="../assets/video/xfill-img.png"
+          aria-label="Video de presentación de Duramez"
+        >
+          <source src="../assets/video/XFilmMadera2.mov" type="video/mp4" />
+        </video>
+      </div>
+    </div>
+  </div>
+
+  <!-- Columna Derecha: Texto -->
+  
+<div class="col-lg-7" data-aos="fade-left" data-aos-delay="300">
+  <div class="about-content-new">
+    
+    <div class="faq__head mb-3">
+      <h2 id="faq-titulo" class="faq__title">
+        <span class="marker">sobre nosotros </span>
+      </h2>
+    </div>
+    
+    <p class="about-text">
+      Somos una empresa peruana especializada en el desarrollo de soluciones para la protección y conservación de superficies. Trabajamos con tecnología, productos de alta calidad y un enfoque en la durabilidad, brindando resultados confiables en cada proyecto.
+    </p>
+
+    <!-- Lista en dos columnas con viñetas amarillas -->
+    <div class="row">
+      <div class="col-sm-6">
+        <ul class="checklist-yellow">
+          <li>Clínicas y hospitales</li>
+          <li>Tiendas y locales comerciales</li>
+          <li>Industrias y centros de procesamiento de alimentos</li>
+        </ul>
+      </div>
+      <div class="col-sm-6">
+        <ul class="checklist-yellow">
+          <li>Bares y restaurantes</li>
+          <li>Zonas residenciales y condominios</li>
+          <li>Programas de mantenimiento y conservación</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Caja de cita inferior -->
+    <div class="about-quote-box">
+      <p>Trabajamos para que cada espacio se mantenga protegido, limpio y en óptimas condiciones, por más tiempo.</p>
+    </div>
+
+  </div>
+</div>
+
+</div>
+        </div>
+      </section>
+
+      <!-- ===================== OPINIONES (carrusel) ===================== -->
+
+      <!-- ===================== OPINIONES (carrusel infinito) ===================== -->
+      <section
+        id="opiniones"
+        class="section section--reviews"
+        aria-labelledby="opiniones-titulo"
+      >
+        <div class="container">
+          <div class="faq__head">
+            <h2 id="opiniones-titulo" class="faq__title">
+              <span class="marker">tu opinion nos importa</span>
+            </h2>
+            <a class="btn-outline-ink" href="#contacto">Ver todas</a>
+          </div>
+
+          <div class="reviews-marquee" aria-label="Opiniones de clientes">
+            <!-- Track 1 (visible) -->
+            <ul class="reviews-marquee__track">
+              <li class="review" style="--c: #e8552d">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">A</span>
+                  <div>
+                    <p class="review__name">Andrés Pérez</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Renovamos la cocina con Duramez y quedó como nueva. La
+                  película se adaptó a cada puerta y ya no nos preocupan las
+                  manchas. El equipo fue puntual y muy ordenado.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #f08a1c">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">M</span>
+                  <div>
+                    <p class="review__name">Marta Salazar</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Excelente servicio. Muy contenta con el producto y con la
+                  atención. Lo recomiendo sin dudarlo.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #1a7fd0">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">J</span>
+                  <div>
+                    <p class="review__name">Jorge Torres</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Atención cercana desde la cotización hasta la entrega.
+                  Explicaron los materiales con claridad, cumplieron los plazos
+                  y el resultado superó lo que esperaba para nuestro local.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #9c3fb8">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">K</span>
+                  <div>
+                    <p class="review__name">Karina Delgado</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Empresa profesional y con precios justos. La instalación en
+                  los vidrios fue rápida y el acabado es impecable. Ya les
+                  pedimos una segunda obra.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #2e9e5b">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">L</span>
+                  <div>
+                    <p class="review__name">Luis Ramírez</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Rotularon tres camionetas de nuestra flota en dos días. Los
+                  colores salieron fieles al diseño y sin una sola burbuja.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #d6336c">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">P</span>
+                  <div>
+                    <p class="review__name">Patricia Vega</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Cambié el aspecto de mi oficina sin parar el trabajo un solo
+                  día. Trabajaron fuera de horario y dejaron todo limpio. Muy
+                  recomendables para quien no quiere hacer obra.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #0b7285">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">R</span>
+                  <div>
+                    <p class="review__name">Rodrigo Campos</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Me enviaron muestras antes de decidir y la cotización llegó el
+                  mismo día. El vinil resiste el calor de mi cocina sin
+                  levantarse.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #7048e8">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">E</span>
+                  <div>
+                    <p class="review__name">Elena Ríos</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Después de un año el vinil sigue igual que el primer día.
+                  Cuando tuve una duda con la limpieza me respondieron en
+                  minutos.
+                </p>
+              </li>
+
+              <!-- ✨ NUEVAS 2 OPINIONES -->
+              <li class="review" style="--c: #f59f00">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">S</span>
+                  <div>
+                    <p class="review__name">Sofía Mendoza</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Cubrieron toda la recepción de nuestra clínica. El acabado
+                  mate quedó perfecto, se nota la calidad del material y el
+                  trato del equipo fue impecable.
+                </p>
+              </li>
+
+              <li class="review" style="--c: #c2255c">
+                <div class="review__head">
+                  <span class="review__avatar" aria-hidden="true">D</span>
+                  <div>
+                    <p class="review__name">Diego Herrera</p>
+                    <span
+                      class="stars"
+                      role="img"
+                      aria-label="5 de 5 estrellas"
+                    >
+                      <i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i
+                      ><i class="bi bi-star-fill"></i>
+                    </span>
+                  </div>
+                </div>
+                <p class="review__text">
+                  Contratamos el servicio para proteger las mesas de mármol del
+                  restaurante y ha sido la mejor inversión. Resisten el uso
+                  diario sin una sola mancha.
+                </p>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== BENEFICIOS ===================== -->
+      <div
+        id="beneficios"
+        class="section--perks"
+        aria-label="Beneficios del vinil"
+      >
+        <div class="container">
+          <ul class="perks">
+            <li class="perks__item" data-aos="fade-up" data-aos-delay="100">
+              <span class="perks__icon" aria-hidden="true"
+                ><i class="bi bi-shield-check"></i
+              ></span>
+              <h3 class="perks__title">Garantía hasta 10 años</h3>
+              <p class="perks__text">Sin burbujas ni levantamiento</p>
+            </li>
+            <li class="perks__item" data-aos="fade-up" data-aos-delay="200">
+              <span class="perks__icon" aria-hidden="true"
+                ><i class="bi bi-heart"></i
+              ></span>
+              <h3 class="perks__title">Autorreparable</h3>
+              <p class="perks__text">Se activa con el calor</p>
+            </li>
+            <li class="perks__item" data-aos="fade-up" data-aos-delay="300">
+              <span class="perks__icon" aria-hidden="true"
+                ><i class="bi bi-sun"></i
+              ></span>
+              <h3 class="perks__title">Resistencia UV</h3>
+              <p class="perks__text">No amarillea ni se decolora</p>
+            </li>
+            <li class="perks__item" data-aos="fade-up" data-aos-delay="400">
+              <span class="perks__icon" aria-hidden="true"
+                ><i class="bi bi-stars"></i
+              ></span>
+              <h3 class="perks__title">Estética</h3>
+              <p class="perks__text">Acabados brillante o mate</p>
+            </li>
+            <li class="perks__item" data-aos="fade-up" data-aos-delay="500">
+              <span class="perks__icon" aria-hidden="true"
+                ><i class="bi bi-droplet-half"></i
+              ></span>
+              <h3 class="perks__title">Protección total</h3>
+              <p class="perks__text">A salvo de manchas y corrosión</p>
+            </li>
+          </ul>
+        </div>
+      </div>
+
+      <section class="producto py-5">
+        <div class="container">
+          <div class="row text-end g-4 g-lg-5 pb-4 row-duraflex">
+            <div
+              class="col-md-6 text-center"
+              data-aos="fade-right"
+              data-aos-delay="150"
+            >
+              <img
+                src="../assets/image/Duraflex_Image_AdhesiveBonding-1024x770.jpg"
+                alt="duraflex"
+                class="img-fluid shadow"
+              />
+            </div>
+            <div
+              class="col-md-6 text-block"
+              data-aos="fade-left"
+              data-aos-delay="250"
+            >
+              <h3 class="text-primary fw-bold mb-3">LA DIFERENCIA DURAFLEX</h3>
+              <p class="lead">
+                La película de poliuretano se desarrolló originalmente para
+                proteger la pintura automotriz de alta gama de la abrasión y los
+                elementos. DURAFLEX es la primera empresa en diseñar esta
+                tecnología específicamente para mármol y piedra natural.
+              </p>
+
+              <p class="lead">
+                Sometida a pruebas de resistencia al fuego independientes por
+                CSIRO según la norma AS/NZS 1530.3 y fabricada con materiales de
+                ingeniería, DURAFLEX ofrece un nivel de protección y durabilidad
+                inigualable por otras películas y selladores químicos, sin
+                alterar la belleza natural de su piedra natural o artificial.
+              </p>
+            </div>
+          </div>
+          <div class="row text-star g-4 g-lg-5 pt-4 row-piedras">
+            <div class="col-md-4" data-aos="fade-right" data-aos-delay="150">
+              <h3 class="text-primary fw-bold mt-3">PIEDRAS SIN ESTRES</h3>
+              <p class="lead">
+                Derrama ese vino, exprime ese limón y espolvorea esas
+                especias.<br />
+
+                Acostúmbrate a usar tu cocina como debe ser, sin el estrés de
+                las manchas y los arañazos.
+                <br />
+                DURAFLEX protege tus encimeras, salpicaderos, placas de cocina y
+                baños de los elementos habituales.
+              </p>
+            </div>
+            <div
+              class="col-md-8 cont-img"
+              data-aos="fade-left"
+              data-aos-delay="250"
+            >
+              <img
+                src="../assets/image/superficie-base.jpg"
+                alt="sin-estres"
+                class="img-fluid shadow img-piedras"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="instaladores" class="installers">
+        <div class="container-fluid p-0 installers__media" aria-hidden="true">
+          <div class="installers__fallback"></div>
+          <video
+            class="installers__video bg-video"
+            autoplay
+            muted
+            loop
+            playsinline
+            poster="assets/img/instaladores-poster.jpg"
+          >
+            <source
+              src="../assets/video/duraflex-website-long-loop-comp.mp4"
+              type="video/mp4"
+            />
+            <source
+              src="../assets/video/duraflex-website-long-loop-comp.webm"
+              type="video/webm"
+            />
+          </video>
+          <div class="installers__overlay"></div>
+        </div>
+        <div class="container installers__inner">
+          <div class="installers__copy">
+            <h2
+              class="installers__title"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              La red de instaladores certificados más confiable
+            </h2>
+
+            <p class="installers__lead" data-aos="fade-up" data-aos-delay="350">
+              Nuestros instaladores se seleccionan a mano...
+            </p>
+            <a
+              class="btn-hero"
+              href="#contacto"
+              data-aos="fade-up"
+              data-aos-delay="500"
+              >Buscar instalador certificado</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row sec-control">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="100">
+              <div class="d-flex align-items-start feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-globe-americas"></i>
+                </div>
+
+                <div class="feature-content">
+                  <h3>PROBADO EN CUANTO A INFLAMABILIDAD POR CSIRO</h3>
+                  <p>
+                    Probado de forma independiente según la <br />norma AS/NZS
+                    1530.3.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-3" data-aos="fade-up" data-aos-delay="200">
+              <div class="d-flex align-items-start feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-award"></i>
+                </div>
+
+                <div class="feature-content">
+                  <h3>MATERIALES DE INGENIERIA</h3>
+                  <p>Fabricado con polímeros de primera calidad.</p>
+                </div>
+              </div>
+            </div>
+
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="300">
+              <div class="d-flex align-items-start feature-item">
+                <div class="feature-icon">
+                  <i class="bi bi-shield-check"></i>
+                </div>
+
+                <div class="feature-content">
+                  <h3>GARANTIA HASTA 10 AÑOS</h3>
+                  <p>
+                    Garantizado contra el amarilleamiento y el desprendimiento.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== ESTÁNDAR ===================== -->
+      <section
+        id="estandar"
+        class="section section--standard"
+        aria-labelledby="estandar-titulo"
+      >
+        <div class="container">
+          <div class="row align-items-center g-4 g-lg-5">
+            <div class="col-lg-5" data-aos="fade-right" data-aos-delay="150">
+              <h2 id="estandar-titulo" class="standard__title">
+                Un nuevo estándar
+              </h2>
+              <p class="standard__lead">
+                No seguimos una industria, la creamos.
+              </p>
+              <p>
+                Cuando no encontramos un producto que protegiera de verdad la
+                piedra, no nos conformamos.
+              </p>
+              <p>
+                Cuestionamos todo, tomamos ideas del mundo automotriz y
+                diseñamos algo mejor.
+              </p>
+              <a class="btn-outline-ink" href="#producto">Conocer más</a>
+            </div>
+
+            <div class="col-lg-7" data-aos="fade-left" data-aos-delay="250">
+              <div class="standard__frame ratio ratio-21x9">
+                <i class="bi bi-layers" aria-hidden="true"></i>
+                <img
+                  src="../assets/image/Duraflex_Image_Film_Layers-1-1536x1457.jpg"
+                  alt="Corte de las capas del laminado Duramez: capa protectora, top coat, TPU, adhesivo y liner de liberación"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section>
+        <div class="container">
+          <div class="row">
+            <div
+              class="col-lg-7 text-start"
+              data-aos="fade-right"
+              data-aos-delay="150"
+            >
+              <div class="standard__frames">
+                <img
+                  src="../assets/image/control-calidad.jpg"
+                  alt="etiketa control de calidad: alta temperatura"
+                  class="img-fluid w-75 h-auto rounded-3 shadow"
+                  loading="lazy"
+                />
+              </div>
+            </div>
+            <div class="col-lg-5" data-aos="fade-left" data-aos-delay="250">
+              <h2 id="estandar-titulo" class="standard__title">
+                Un nuevo estándar
+              </h2>
+              <p class="standard__lead">
+                No seguimos una industria, la creamos.
+              </p>
+              <p>
+                Cuando no encontramos un producto que protegiera de verdad la
+                piedra, no nos conformamos.
+              </p>
+              <p>
+                Cuestionamos todo, tomamos ideas del mundo automotriz y
+                diseñamos algo mejor.
+              </p>
+              <a class="btn-outline-ink" href="#producto">Conocer más</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== GALERÍA DE TRABAJOS ===================== -->
+      <section
+        id="galeria"
+        class="section section--gallery"
+        aria-labelledby="galeria-titulo"
+      >
+        <div class="container">
+          <div class="sec-title pt-4" data-aos="fade-up">
+            <h2 id="faq-titulo" class="faq__title">
+              <span class="marker">trabajos realizados </span>
+            </h2>
+          </div>
+
+          <div class="gallery" id="galeriaGrid">
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="100"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-01.jpg"
+              data-title="Cocina renovada con vinil"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm1.jpg"
+                alt="Cocina renovada con vinil"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="150"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-02.jpg"
+              data-title="Fachada comercial"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm2.jpg"
+                alt="Fachada comercial"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="200"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-03.jpg"
+              data-title="Vidrios esmerilados"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm3.jpg"
+                alt="Vidrios esmerilados"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="250"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-04.jpg"
+              data-title="Rotulación de camioneta"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm4.jpg"
+                alt="Rotulación de camioneta"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="300"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-05.jpg"
+              data-title="Puertas y closets"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm1.jpg"
+                alt="Puertas y closets"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="350"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-06.jpg"
+              data-title="Mostrador de tienda"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm2.jpg"
+                alt="Mostrador de tienda"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="400"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-07.jpg"
+              data-title="Oficina corporativa"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm4.jpg"
+                alt="Oficina corporativa"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="450"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-08.jpg"
+              data-title="Ascensor forrado"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm3.jpg"
+                alt="Ascensor forrado"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="500"
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-09.jpg"
+              data-title="Mueble de baño"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm1.jpg"
+                alt="Mueble de baño"
+                loading="lazy"
+              />
+            </button>
+
+            <!-- Los siguientes 3 aparecen con «Ver más» -->
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="550"
+              hidden
+              data-extra
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-10.jpg"
+              data-title="Vitrina decorativa"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm3.jpg"
+                alt="Vitrina decorativa"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="600"
+              hidden
+              data-extra
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-11.jpg"
+              data-title="Local gastronómico"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm4.jpg"
+                alt="Local gastronómico"
+                loading="lazy"
+              />
+            </button>
+            <button
+              class="gallery__item"
+              type="button"
+              data-aos="zoom-in"
+              data-aos-delay="650"
+              hidden
+              data-extra
+              data-bs-toggle="modal"
+              data-bs-target="#lightbox"
+              data-src="assets/img/trabajo-12.jpg"
+              data-title="Flota de reparto"
+            >
+              <i class="bi bi-camera-fill gallery__ph" aria-hidden="true"></i>
+              <img
+                src="../assets/image/imm2.jpg"
+                alt="Flota de reparto"
+                loading="lazy"
+              />
+            </button>
+          </div>
+
+          <div class="gallery__more" data-aos="fade-up" data-aos-delay="200">
+            <button
+              class="ver-mas"
+              id="verMas"
+              type="button"
+              aria-expanded="false"
+              aria-controls="galeriaGrid"
+            >
+              <span class="ver-mas__txt">Ver más</span>
+              <svg
+                class="ver-mas__arrow"
+                viewBox="0 0 120 36"
+                aria-hidden="true"
+                focusable="false"
+              >
+                <rect x="0" y="9" width="6" height="18" rx="1" fill="#6fd3ff" />
+                <rect
+                  x="12"
+                  y="9"
+                  width="6"
+                  height="18"
+                  rx="1"
+                  fill="#4cb6f5"
+                />
+                <rect
+                  x="24"
+                  y="9"
+                  width="6"
+                  height="18"
+                  rx="1"
+                  fill="#2f8fe6"
+                />
+                <rect
+                  x="36"
+                  y="9"
+                  width="6"
+                  height="18"
+                  rx="1"
+                  fill="#2b6fdc"
+                />
+                <path d="M48 9h44V0l28 18-28 18v-9H48z" fill="#2b5fd9" />
+              </svg>
+            </button>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== SERVICIOS ===================== -->
+      <section
+        id="servicios"
+        class="section--services py-5"
+        aria-labelledby="servicios-titulo"
+      >
+        <div class="container">
+          <div class="faq__head" data-aos="fade-up">
+            <h2 id="faq-titulo" class="faq__title">
+              <span class="marker">LA CALIDAD NOS DEFINE</span>
+            </h2>
+          </div>
+
+          <div class="steps">
+            <article
+              class="step step--1"
+              data-aos="fade-up"
+              data-aos-delay="100"
+            >
+              <div class="step__num">
+                <span class="step__n" aria-hidden="true">01</span>
+                <span class="step__tag">Fachadas</span>
+              </div>
+              <div class="step__icon" aria-hidden="true">
+                <i class="bi bi-house-door-fill"></i>
+              </div>
+              <div class="step__body">
+                <h3 class="step__title">
+                  <i class="bi bi-plus-circle-fill" aria-hidden="true"></i>Vinil
+                  para fachadas y vidrios
+                </h3>
+                <p>
+                  Cubrimos vitrinas, ventanas y frentes de local con vinil
+                  esmerilado, decorativo o publicitario. Resiste sol, lluvia y
+                  limpieza frecuente.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="step step--2"
+              data-aos="fade-up"
+              data-aos-delay="200"
+            >
+              <div class="step__num">
+                <span class="step__n" aria-hidden="true">02</span>
+                <span class="step__tag">Rápido</span>
+              </div>
+              <div class="step__icon" aria-hidden="true">
+                <i class="bi bi-alarm-fill"></i>
+              </div>
+              <div class="step__body">
+                <h3 class="step__title">
+                  <i class="bi bi-plus-circle-fill" aria-hidden="true"></i
+                  >Instalación express
+                </h3>
+                <p>
+                  Renovamos cocinas, oficinas y locales en uno o dos días, sin
+                  obra ni polvo. Tú eliges el horario y nosotros nos adaptamos.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="step step--3"
+              data-aos="fade-up"
+              data-aos-delay="300"
+            >
+              <div class="step__num">
+                <span class="step__n" aria-hidden="true">03</span>
+                <span class="step__tag">A tu medida</span>
+              </div>
+              <div class="step__icon" aria-hidden="true">
+                <i class="bi bi-chat-dots-fill"></i>
+              </div>
+              <div class="step__body">
+                <h3 class="step__title">
+                  <i class="bi bi-plus-circle-fill" aria-hidden="true"></i
+                  >Asesoría personalizada
+                </h3>
+                <p>
+                  Te ayudamos a elegir color, textura y acabado según el uso de
+                  cada superficie, y te mostramos muestras antes de
+                  comprometerte.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="step step--4"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <div class="step__num">
+                <span class="step__n" aria-hidden="true">04</span>
+                <span class="step__tag">Sin costo</span>
+              </div>
+              <div class="step__icon" aria-hidden="true">
+                <i class="bi bi-envelope-fill"></i>
+              </div>
+              <div class="step__body">
+                <h3 class="step__title">
+                  <i class="bi bi-plus-circle-fill" aria-hidden="true"></i
+                  >Cotización al instante
+                </h3>
+                <p>
+                  Envíanos una foto y las medidas por correo o WhatsApp. Te
+                  respondemos con un presupuesto claro, sin cargos ocultos.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PUBLICIDAD / OFERTA ===================== -->
+      <section
+        id="equipo"
+        class="section--promo"
+        aria-label="Conoce a tu asesora y oferta del mes"
+      >
+        <!-- Banner 2: oferta -->
+        <div class="offer">
+          <div class="container">
+            <div class="row align-items-center g-4 g-lg-5">
+              <div class="col-lg-4" data-aos="fade-right" data-aos-delay="150">
+                <p class="offer__kicker fw-bold">Oferta del mes</p>
+                <h2 class="offer__title">Invierte en tu espacio</h2>
+                <p class="offer__text">
+                  Un solo pago que cambia el aspecto de tu casa o negocio.
+                </p>
+                <ul class="offer__list">
+                  <li>
+                    <i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                    >Visita y medición gratuitas
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                    >Muestras de vinil sin costo
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                    >Instalación por técnicos certificados
+                  </li>
+                  <li>
+                    <i class="bi bi-check-circle-fill" aria-hidden="true"></i
+                    >Garantía de 2 años incluida
+                  </li>
+                </ul>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-3"
+                data-aos="zoom-in"
+                data-aos-delay="300"
+              >
+                <div class="offer__bubble ink-ofert">
+                  <p>Tu espacio nuevo te lo va a agradecer.</p>
+                  <i class="bi bi-heart-fill" aria-hidden="true"></i>
+                </div>
+              </div>
+
+              <div
+                class="col-md-6 col-lg-5"
+                data-aos="fade-left"
+                data-aos-delay="450"
+              >
+                <div class="price-card">
+                  <p class="price-card__price">$297</p>
+                  <p class="price-card__note">
+                    Pago único por proyecto estándar
+                  </p>
+                  <p class="price-card__chip">
+                    o 2 pagos de <strong>$148.50</strong>
+                  </p>
+                  <a
+                    class="price-card__cta"
+                    href="#contacto"
+                    data-servicio="Vinil en cocinas y muebles"
+                    >Reservar ahora · $297</a
+                  >
+                  <p class="price-card__guarantee">
+                    <i class="bi bi-shield-check" aria-hidden="true"></i
+                    >Garantía de devolución de 30 días
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== PREGUNTAS FRECUENTES (Foro) ===================== -->
+      <section
+        id="foro"
+        class="section section--faq"
+        aria-labelledby="faq-titulo"
+      >
+        <div class="container">
+          <div class="faq__head" data-aos="fade-up">
+            <h2 id="faq-titulo" class="faq__title">
+              <span class="marker">Preguntas frecuentes</span>
+            </h2>
+            <a class="btn-outline-ink" href="#contacto">Ver todas</a>
+          </div>
+
+          <div class="accordion accordion-flush faq" id="faqAcordeon">
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="100">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq1"
+                  aria-expanded="false"
+                  aria-controls="faq1"
+                >
+                  ¿Qué cubre la garantía?
+                </button>
+              </h3>
+              <div
+                id="faq1"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcordeon"
+              >
+                <div class="accordion-body">
+                  La garantía cubre defectos del material y de la instalación,
+                  como burbujas, bordes levantados o desprendimientos. No cubre
+                  daños por golpes, cortes o uso indebido. Recibes las
+                  condiciones por escrito antes de empezar.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="150">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq2"
+                  aria-expanded="false"
+                  aria-controls="faq2"
+                >
+                  ¿Cómo maneja Duramez la humedad?
+                </button>
+              </h3>
+              <div
+                id="faq2"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcordeon"
+              >
+                <div class="accordion-body">
+                  El vinil es impermeable y sella la superficie, por eso
+                  funciona bien en cocinas y baños. Solo pedimos que la base
+                  esté seca y limpia el día de la instalación.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="200">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq3"
+                  aria-expanded="false"
+                  aria-controls="faq3"
+                >
+                  ¿Cuánto dura la película de vinil?
+                </button>
+              </h3>
+              <div
+                id="faq3"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcordeon"
+              >
+                <div class="accordion-body">
+                  En interiores dura entre 7 y 10 años con un cuidado normal. En
+                  exteriores depende de la exposición al sol; te indicamos la
+                  duración estimada al cotizar.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="250">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq4"
+                  aria-expanded="false"
+                  aria-controls="faq4"
+                >
+                  ¿Puedo poner ollas o tazas calientes directamente sobre
+                  Duramez?
+                </button>
+              </h3>
+              <div
+                id="faq4"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcordeon"
+              >
+                <div class="accordion-body">
+                  Resiste tazas y platos calientes, pero no recomendamos apoyar
+                  ollas recién sacadas del fuego. Usa un posaollas para evitar
+                  marcas o deformaciones.
+                </div>
+              </div>
+            </div>
+
+            <div class="accordion-item" data-aos="fade-up" data-aos-delay="300">
+              <h3 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq5"
+                  aria-expanded="false"
+                  aria-controls="faq5"
+                >
+                  ¿Se puede retirar el vinil sin dañar la superficie?
+                </button>
+              </h3>
+              <div
+                id="faq5"
+                class="accordion-collapse collapse"
+                data-bs-parent="#faqAcordeon"
+              >
+                <div class="accordion-body">
+                  Sí. Con calor controlado el vinil se despega sin dejar
+                  residuos en superficies en buen estado. También ofrecemos el
+                  servicio de retiro y renovación.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ===================== CONTACTO ===================== -->
+      <section
+        id="contacto"
+        class="section section--contact"
+        aria-labelledby="contacto-titulo"
+      >
+        <div class="container">
+          <div class="contact-card">
+            <div class="row g-4 g-lg-5 align-items-center">
+              <div class="col-lg-6" data-aos="fade-right" data-aos-delay="150">
+                <p class="contact__badge">
+                  <i class="bi bi-lightning-charge-fill" aria-hidden="true"></i
+                  >Empieza tu proyecto
+                </p>
+                <h2 id="contacto-titulo" class="contact__title">
+                  Construyamos tu proyecto
+                </h2>
+                <p class="contact__text">
+                  Cuéntanos qué quieres renovar. Completa el formulario o
+                  escríbenos directamente y te respondemos en menos de 24 horas.
+                </p>
+
+                <ul class="contact__list">
+                  <li>
+                    <span class="contact__icon"
+                      ><i class="bi bi-telephone-fill" aria-hidden="true"></i
+                    ></span>
+                    <a href="tel:+000000000000">+00 000 000 000</a>
+                  </li>
+                  <li>
+                    <span class="contact__icon"
+                      ><i class="bi bi-geo-alt-fill" aria-hidden="true"></i
+                    ></span>
+                    <span>Tu ciudad, País</span>
+                  </li>
+                  <li>
+                    <span class="contact__icon"
+                      ><i class="bi bi-envelope-fill" aria-hidden="true"></i
+                    ></span>
+                    <a href="mailto:hola@duramez.com">hola@duramez.com</a>
+                  </li>
+                </ul>
+              </div>
+
+              <div class="col-lg-6" data-aos="fade-left" data-aos-delay="300">
+                <div class="contact-panel">
+                  <form
+                    id="formContacto"
+                    class="needs-validation"
+                    action="assets/php/enviar.php"
+                    method="post"
+                    data-mail-form
+                    novalidate
+                  >
+                    <input type="hidden" name="tipo" value="contacto" />
+                    <div class="hp" aria-hidden="true">
+                      <label for="website">No rellenar</label>
+                      <input
+                        type="text"
+                        id="website"
+                        name="website"
+                        tabindex="-1"
+                        autocomplete="off"
+                      />
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label" for="nombre"
+                        >Nombre / Empresa</label
+                      >
+                      <input
+                        class="form-control"
+                        type="text"
+                        id="nombre"
+                        name="nombre"
+                        placeholder="Ej. Ana Torres"
+                        autocomplete="name"
+                        maxlength="80"
+                        required
+                      />
+                      <div class="invalid-feedback">
+                        Escribe tu nombre o el de tu empresa.
+                      </div>
+                    </div>
+
+                    <div class="row g-3 mb-3">
+                      <div class="col-sm-6">
+                        <label class="form-label" for="telefono"
+                          >Teléfono</label
+                        >
+                        <input
+                          class="form-control"
+                          type="tel"
+                          id="telefono"
+                          name="telefono"
+                          placeholder="+00 000 000 000"
+                          autocomplete="tel"
+                          pattern="[0-9+()\-\s]{7,20}"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa un teléfono válido (solo números).
+                        </div>
+                      </div>
+                      <div class="col-sm-6">
+                        <label class="form-label" for="email">Correo</label>
+                        <input
+                          class="form-control"
+                          type="email"
+                          id="email"
+                          name="email"
+                          placeholder="tucorreo@ejemplo.com"
+                          autocomplete="email"
+                          maxlength="120"
+                          required
+                        />
+                        <div class="invalid-feedback">
+                          Ingresa un correo válido.
+                        </div>
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label" for="servicio">Servicio</label>
+                      <select
+                        class="form-select"
+                        id="servicio"
+                        name="servicio"
+                        required
+                      >
+                        <option value="" selected disabled>
+                          Selecciona un servicio
+                        </option>
+                        <option>Vinil en cocinas y muebles</option>
+                        <option>Vidrios esmerilados y decorativos</option>
+                        <option>Fachadas y rotulación comercial</option>
+                        <option>Rotulación de vehículos</option>
+                        <option>Otro</option>
+                      </select>
+                      <div class="invalid-feedback">
+                        Elige el servicio que te interesa.
+                      </div>
+                    </div>
+
+                    <div class="mb-3">
+                      <label class="form-label" for="mensaje">Mensaje</label>
+                      <textarea
+                        class="form-control"
+                        id="mensaje"
+                        name="mensaje"
+                        rows="4"
+                        placeholder="Cuéntanos qué quieres renovar y las medidas aproximadas"
+                        maxlength="1500"
+                        required
+                      ></textarea>
+                      <div class="invalid-feedback">
+                        Escribe un mensaje para poder ayudarte.
+                      </div>
+                    </div>
+
+                    <button class="btn-send" type="submit">
+                      <span class="btn-send__icon">
+                        <i class="bi bi-send-fill" aria-hidden="true"></i>
+                        <span
+                          class="spinner-border spinner-border-sm"
+                          aria-hidden="true"
+                        ></span>
+                      </span>
+                      <span class="btn-send__txt">Enviar mensaje</span>
+                    </button>
+
+                    <div
+                      class="form-alert"
+                      data-alert
+                      role="status"
+                      aria-live="polite"
+                    ></div>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ===================== FOOTER ===================== -->
+    <footer class="footer">
+      <div class="container">
+        <div class="footer__brand" data-aos="fade-up">
+          <a
+            class="brand-pill brand-pill--sm"
+            href="#inicio"
+            aria-label="Duramez, ir al inicio"
+          >
+            <img
+              src="../assets/image/film.png"
+              alt="Duramez logo"
+              class="footer-logo"
+            />
+          </a>
+        </div>
+
+        <div class="row g-4 footer__top">
+          <div
+            class="col-6 col-md-3 col-lg-2"
+            data-aos="fade-up"
+            data-aos-delay="100"
+          >
+            <h2 class="footer__title">Clientes</h2>
+            <ul class="footer__links">
+              <li><a href="#contacto">Solicitar cotización</a></li>
+              <li><a href="#foro">Preguntas frecuentes</a></li>
+              <li><a href="#opiniones">Opiniones</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-6 col-md-3 col-lg-2"
+            data-aos="fade-up"
+            data-aos-delay="150"
+          >
+            <h2 class="footer__title">Sobre nosotros</h2>
+            <ul class="footer__links">
+              <li><a href="#nosotros">Quiénes somos</a></li>
+              <li><a href="#galeria">Trabajos</a></li>
+              <li><a href="#servicios">Servicios</a></li>
+              <li><a href="#equipo">Nuestro equipo</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-6 col-md-3 col-lg-2"
+            data-aos="fade-up"
+            data-aos-delay="200"
+          >
+            <h2 class="footer__title">Producto</h2>
+            <ul class="footer__links">
+              <li><a href="#foro">Cuidado y limpieza</a></li>
+              <li><a href="#foro">Garantía</a></li>
+              <li><a href="#foro">Duración</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-6 col-md-3 col-lg-2"
+            data-aos="fade-up"
+            data-aos-delay="250"
+          >
+            <h2 class="footer__title">Condiciones</h2>
+            <ul class="footer__links">
+              <li><a href="#">Política de privacidad</a></li>
+              <li><a href="#">Términos y condiciones</a></li>
+              <li><a href="#">Política de cookies</a></li>
+            </ul>
+          </div>
+
+          <div
+            class="col-12 col-lg-4"
+            id="newsletter"
+            data-aos="fade-up"
+            data-aos-delay="300"
+          >
+            <h2 class="footer__title">Newsletter</h2>
+            <p class="footer__text">
+              Recibe ideas, novedades y ofertas de Duramez en tu correo.
+            </p>
+
+            <form
+              class="newsletter needs-validation"
+              action="assets/php/enviar.php"
+              method="post"
+              data-mail-form
+              novalidate
+            >
+              <input type="hidden" name="tipo" value="newsletter" />
+              <div class="hp" aria-hidden="true">
+                <label for="website2">No rellenar</label>
+                <input
+                  type="text"
+                  id="website2"
+                  name="website"
+                  tabindex="-1"
+                  autocomplete="off"
+                />
+              </div>
+
+              <div class="newsletter__field">
+                <label class="visually-hidden" for="newsEmail"
+                  >Correo electrónico</label
+                >
+                <input
+                  class="newsletter__input"
+                  type="email"
+                  id="newsEmail"
+                  name="email"
+                  placeholder="Tu correo electrónico"
+                  autocomplete="email"
+                  required
+                />
+                <button class="newsletter__btn" type="submit">
+                  <span class="newsletter__btn-txt">Suscribirme</span>
+                  <span
+                    class="spinner-border spinner-border-sm"
+                    aria-hidden="true"
+                  ></span>
+                </button>
+              </div>
+              <div class="invalid-feedback">Ingresa un correo válido.</div>
+
+              <div class="form-check">
+                <input
+                  class="form-check-input"
+                  type="checkbox"
+                  id="consent"
+                  name="consentimiento"
+                  required
+                />
+                <label class="form-check-label" for="consent">
+                  Acepto la <a href="#">política de privacidad</a>.
+                </label>
+                <div class="invalid-feedback">
+                  Debes aceptar la política para suscribirte.
+                </div>
+              </div>
+
+              <div
+                class="form-alert form-alert--dark"
+                data-alert
+                role="status"
+                aria-live="polite"
+              ></div>
+            </form>
+          </div>
+        </div>
+
+        <div class="footer__social" data-aos="fade-up" data-aos-delay="150">
+          <ul aria-label="Redes sociales">
+            <li>
+              <a href="#" aria-label="Instagram"
+                ><i class="bi bi-instagram"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="Facebook"
+                ><i class="bi bi-facebook"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="X (Twitter)"
+                ><i class="bi bi-twitter-x"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="LinkedIn"
+                ><i class="bi bi-linkedin"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="YouTube"><i class="bi bi-youtube"></i></a>
+            </li>
+            <li>
+              <a href="#" aria-label="WhatsApp"
+                ><i class="bi bi-whatsapp"></i
+              ></a>
+            </li>
+            <li>
+              <a href="#" aria-label="TikTok"><i class="bi bi-tiktok"></i></a>
+            </li>
+          </ul>
+        </div>
+
+        <p class="footer__copy" data-aos="fade-up" data-aos-delay="200">
+          © <span id="anio">2026</span> Duramez. Todos los derechos reservados.
+        </p>
+      </div>
+    </footer>
+
+    <!-- ===================== VOLVER ARRIBA ===================== -->
+    <button
+      class="to-top"
+      id="btnTop"
+      type="button"
+      aria-label="Volver al inicio de la página"
+    >
+      <i class="bi bi-arrow-up" aria-hidden="true"></i>
+    </button>
+
+    <!-- ===================== LIGHTBOX (galería) ===================== -->
+    <div
+      class="modal fade lightbox"
+      id="lightbox"
+      data-bs-theme="dark"
+      tabindex="-1"
+      aria-labelledby="lightboxTitle"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-dialog-centered modal-lg">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h2 class="modal-title" id="lightboxTitle">Trabajo</h2>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+              aria-label="Cerrar"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div class="lightbox__stage">
+              <img id="lightboxImg" alt="" />
+              <i
+                class="bi bi-camera-fill lightbox__ph"
+                id="lightboxPh"
+                hidden
+                aria-hidden="true"
+              ></i>
+            </div>
+            <button
+              class="lightbox__nav lightbox__nav--prev"
+              type="button"
+              id="lbPrev"
+              aria-label="Imagen anterior"
+            >
+              <i class="bi bi-chevron-left" aria-hidden="true"></i>
+            </button>
+            <button
+              class="lightbox__nav lightbox__nav--next"
+              type="button"
+              id="lbNext"
+              aria-label="Imagen siguiente"
+            >
+              <i class="bi bi-chevron-right" aria-hidden="true"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-FKyoEForCGlyvwx9Hj09JcYn3nv7wiPVlz7YYwJrWVcXK/BmnVDxM+D2scQbITxI"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      AOS.init({
+        duration: 700,
+        easing: "ease-out-cubic",
+        once: true,
+        mirror: false,
+        offset: 80,
+      });
+    </script>
+
+    <script src="assets/js/script.js"></script>
+  </body>
+</html>

@@ -1,0 +1,6 @@
+# Ignorar un archivo específico
+documento.docx
+
+# Ignorar todos los archivos Word
+*.docx
+*.doc
